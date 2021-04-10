@@ -1,2 +1,2 @@
-# electra-base-german-uncased
+# German Electra Model
 The German Electra model.
