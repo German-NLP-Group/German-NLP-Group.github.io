@@ -30,6 +30,7 @@ author = 'Philip May & Philipp Reißel'
 extensions = [
     "sphinx_rtd_theme",
     "myst_nb",
+    "sphinx.ext.githubpages",
 ]
 
 # add github link
