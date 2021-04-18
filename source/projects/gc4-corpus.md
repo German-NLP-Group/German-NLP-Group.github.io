@@ -6,6 +6,16 @@ This German text corpus has been created by [**Philipp Reißel**](https://www.re
 Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
 ## Download
+The corpus is split into multiple files. Below are links to each single archive.
+
+Instead of downloading the single links you can download two files with all URLs and then use `wget` to download the single archives:
+
+```bash
+wget https://german-nlp-group.github.io/_static/file/gc4_corpus_head_urls.txt
+wget -i gc4_corpus_head_urls.txt
+wget https://german-nlp-group.github.io/_static/file/gc4_corpus_middle_urls.txt
+wget -i gc4_corpus_middle_urls.txt
+```
 
 ### Head
 - https://opendata.iisys.de/systemintegration/Datasets/CommonCrawl/head/de_head_0000_2015-48.tar.gz
