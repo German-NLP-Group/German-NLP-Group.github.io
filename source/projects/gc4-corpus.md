@@ -5,7 +5,7 @@ This is a German text corpus which is based on [Common Crawl](https://commoncraw
 
 GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/) with support from [Philip May](https://may.la/) . Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
-**For download scroll way down.**
+**For [download](#download) scroll way down.**
 
 In a very simplified matter one can say:
 
@@ -73,7 +73,7 @@ This table sums up the sizes of all preprocessed monthly dumps and 2 different a
 
 | Size here is with metadata but compressed<br/>as .gz so raw text is approx. 2x the given size | Head<br/>pages/size  | Middle<br/>pages/size          | Tail<br/>pages/size         |
 | ------------------------------------------------------------ | ---------------- | -------------------------- | ------------ |
-| Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------<br/>1TB |
+| Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------<br/>1 TB |
 | Deduplication through similar Text<br/>(available on request)    | 181 Mio<br/>294 GB | 251 Mio<br/>not yet exported |              |
 | **Deduplication through similar Text and URLs**<br/>(this is the one you can download here) | 142 Mio<br/>194 GB | 186 Mio<br/>254 GB           |              |
 
