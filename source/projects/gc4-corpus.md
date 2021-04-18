@@ -20,7 +20,7 @@ Preprocessing was done through the [cc_net library](https://github.com/facebookr
 
 | CC Dump                       | Total Size: German tail + middle + head  (before dedup)      | CC Original Size (TB) |
 | ----------------------------- | ------------------------------------------------------------ | --------------------- |
-| 2015-22 (2015-27 not working) | Stopped                                                      |                       |
+| 2015-22 (2015-27 not working) | stopped                                                      |                       |
 | 2015-48                       | 8.9 GB                                                       | 151                   |
 | 2016-18                       | 17.7 GB                                                      |                       |
 | 2016-44                       | 119 GB                                                       |                       |
@@ -34,7 +34,7 @@ Preprocessing was done through the [cc_net library](https://github.com/facebookr
 | 2018-39                       | ~120 GB                                                      | September 220         |
 | 2018-51                       | ~120 GB                                                      | December 250          |
 | 2019-09                       | 119.8 GB                                                     | February              |
-| 2019-18                       | 119 GB                                                       | April 198 TB          |
+| 2019-18                       | 119 GB                                                       | April 198           |
 | 2019-30                       | 120 GB                                                       |                       |
 | 2019-47                       | 150.2 GB                                                     | November              |
 | 2020-10                       | 134 GB                                                       | February 240          |
