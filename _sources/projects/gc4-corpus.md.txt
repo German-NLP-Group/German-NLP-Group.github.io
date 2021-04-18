@@ -5,26 +5,17 @@ This is a German text corpus which is based on [Common Crawl](https://commoncraw
 
 GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/) with support from [Philip May](https://eniak.de/) . Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
+**For download scroll way down.**
 
-
-**For the Download Links scroll to the bottom**
-
-
-
-In a very simplified matter one can say: 
+In a very simplified matter one can say:
 
 - **HEAD**: Consists of high quality text (e.g. newspaper, government websites)
-- **MIDDLE**: More colloquial language like forum entries, commentary sections 
+- **MIDDLE**: More colloquial language like forum entries, commentary sections
 - TAIL: The dark side of the Internet
 
-As it is classified through n-gram occurrences in comparison with the German wikipedia n-gram from our practical experience it worked quite well.  
-
-
-
-
+As it is classified through n-gram occurrences in comparison with the German wikipedia n-gram from our practical experience it worked quite well.
 
 ## Preprocessing
-
 Preprocessing was done through the [cc_net library](https://github.com/facebookresearch/cc_net)
 
 | CC Dump                       | Total Size: German tail + middle + head  (before dedup)      | CC Original Size (TB) |
@@ -49,73 +40,56 @@ Preprocessing was done through the [cc_net library](https://github.com/facebookr
 | 2020-10                       | 134 GB                                                       | February 240          |
 | 2020-34 / 2020-29             | NOT WORKING ENCODING ISSUE, see [Issue](https://github.com/facebookresearch/cc_net/issues/16) | August 235            |
 
-This preprocessing is filtering duplicates only inside the same dump. This step took approx. 50 000 CPU hours and 400 TB of network traffic to the common crawl s3 bucket. 
+This preprocessing is filtering duplicates only inside the same dump. This step took approx. 50 000 CPU hours and 400 TB of network traffic to the common crawl s3 bucket.
 
+## Common Crawl News Dataset
+You can convert the Common Crawl News Shards with a WARC to WET library and then feed to cc_net just as the normal Common Crawl dumps.
 
+Given the average sizes of the hourly News shards:
 
-#### Common Crawl News Dataset: 
-
-You can convert the Common Crawl News Shards with a WARC to WET library and then feed to cc_net just as the normal Common Crawl dumps. 
-
-Given the average sizes of the hourly News shards: 
-
-- WARC: 1100 mb 
-- WARC -> WET: 124mb 
-- Filtering WET for german only: 2.6 mb 
-- Head only (highest quality): 0.8 mb 
+- WARC: 1100 mb
+- WARC -> WET: 124mb
+- Filtering WET for german only: 2.6 mb
+- Head only (highest quality): 0.8 mb
 
 One can approximate that all news shards combined are just the extent of one monthly common crawl. As large portions of news articles are already included, we decided to not include this because of the low overall quantity.
 
-
-
-
-
-### Clean-Up 
-
+## Clean-Up
 To also delete duplicates which occur in more than one Common Crawl dump, we did a deduplication through mongoDB. The Code is available [here](https://github.com/German-NLP-Group/german-transformer-training/tree/master/Hashing)
 
-It requires approx 1+ TB of RAM and at least 64+ CPUs to complete the task in ~3 days. 
+It requires approx 1+ TB of RAM and at least 64+ CPUs to complete the task in ~3 days.
 
+The tail section is not further processed, as these are nearly always scam/porn websites.
 
+This table sums up the sizes of all preprocessed monthly dumps and 2 different approaches of deduplication:
 
-The tail section is not further processed, as these are nearly always scam/porn websites.  
-
-This table sums up the sizes of all preprocessed monthly dumps and 2 different approaches of deduplication: 
-
--  Deduplication through similar Text: 
+-  Deduplication through similar Text:
   - Every content field is hashed and same hashes are removed
   - Problem here is that urls are included multiple times when very little change on the website has happend (e.g. just the year in the imprint has changed)
   - This approach filters out webpages which are copied/mirrored (e.g. there are a lot of wikipedia mirrors out there)
--  **Deduplication through similar Text and URLs**: 
-  - To avoid having sites with the same URL from different monthly dumps in more strict filtering we filtered out every URL that appeared twice 
-  - One edge case which we couldn't solve, were URLs were a hashed parameter is appended, but this is pretty rare  
+-  **Deduplication through similar Text and URLs**:
+  - To avoid having sites with the same URL from different monthly dumps in more strict filtering we filtered out every URL that appeared twice
+  - One edge case which we couldn't solve, were URLs were a hashed parameter is appended, but this is pretty rare
 
-
-
-| (Size here is with metadata but compressed as .gz so raw text is approx. 2x the given size) | Head pages/size  | Middle Pages/size          | Tail         |
+| (Size here is with metadata but compressed as .gz so raw text is approx. 2x the given size) | Head<br/>pages/size  | Middle<br/>Pages/size          | Tail         |
 | ------------------------------------------------------------ | ---------------- | -------------------------- | ------------ |
-| Original                                                     | 263 Mio / 392 GB | 332 Mio / 499 GB           | ------ / 1TB |
-| Deduplication through similar Text (available on request)    | 181 Mio / 294 GB | 251 Mio / not yet exported |              |
-| **Deduplication through similar Text and URLs** (This is the one you can download here) | 142 Mio / 194 GB | 186 Mio / 254.GB           |              |
+| Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------ / 1TB |
+| Deduplication through similar Text<br/>(available on request)    | 181 Mio<br/>294 GB | 251 Mio<br/>not yet exported |              |
+| **Deduplication through similar Text and URLs**<br/>(this is the one you can download here) | 142 Mio<br/>194 GB | 186 Mio<br/>254 GB           |              |
 
-
-
-#### Comparison to other Datasets which are based on Common Crawl and very large: 
-
-- C4/mC4 Dataset used by Google: 
+## Comparison to other Datasets which are based on Common Crawl and very large
+- C4/mC4 Dataset used by Google:
   - Multilingual one is only available on request (See issue [here](https://github.com/allenai/allennlp/discussions/5056))
-  - As the English only is already a requester pays, it requires you to have approx. 100 $ of Google Cloud Credits 
+  - As the English only is already a requester pays, it requires you to have approx. 100 $ of Google Cloud Credits
   - The way of filtering here is different (and in our mind inferior to [cc_net library](https://github.com/facebookresearch/cc_net)
-    - They doesn't split for quality like cc_net 
+    - They doesn't split for quality like cc_net
     - Filtering out every article were one swearword occures, so your models can't learn at all how to deal with them
 - CC100 [download here](http://data.statmt.org/cc-100/)
-  - This data is also preprocessed with cc_net 
+  - This data is also preprocessed with cc_net
   - But only dumps from January-December 2018 are used, so a lack of size and temporal diversity
 - [ORCAS dataset ](https://oscar-corpus.com/)
-  - It only uses one monthly dump (November 2018) from Common Crawl 
-  - The filtering for quality seems to be less precise than cc_net 
-
-
+  - It only uses one monthly dump (November 2018) from Common Crawl
+  - The filtering for quality seems to be less precise than cc_net
 
 ## Download
 The corpus is split into multiple files. Below are links to each single archive.
