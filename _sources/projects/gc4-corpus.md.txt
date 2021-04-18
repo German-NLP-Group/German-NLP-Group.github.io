@@ -5,6 +5,12 @@ This is a German text corpus which is based on [Common Crawl](https://commoncraw
 
 GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/). Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
+## Preprocessing and Cleanup
+TODO: add more info
+
+## Size
+TODO: add more info
+
 ## Download
 The corpus is split into multiple files. Below are links to each single archive.
 
