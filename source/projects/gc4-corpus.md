@@ -71,7 +71,7 @@ This table sums up the sizes of all preprocessed monthly dumps and 2 different a
   - To avoid having sites with the same URL from different monthly dumps in more strict filtering we filtered out every URL that appeared twice
   - One edge case which we couldn't solve, were URLs were a hashed parameter is appended, but this is pretty rare
 
-| (Size here is with metadata but compressed as .gz so raw text is approx. 2x the given size) | Head<br/>pages/size  | Middle<br/>Pages/size          | Tail         |
+| Size here is with metadata but compressed<br/>as .gz so raw text is approx. 2x the given size | Head<br/>pages/size  | Middle<br/>Pages/size          | Tail         |
 | ------------------------------------------------------------ | ---------------- | -------------------------- | ------------ |
 | Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------ / 1TB |
 | Deduplication through similar Text<br/>(available on request)    | 181 Mio<br/>294 GB | 251 Mio<br/>not yet exported |              |
