@@ -38,7 +38,7 @@ Preprocessing was done through the [cc_net library](https://github.com/facebookr
 | 2019-30                       | 120 GB                                                       |                       |
 | 2019-47                       | 150.2 GB                                                     | November              |
 | 2020-10                       | 134 GB                                                       | February 240          |
-| 2020-34 / 2020-29             | NOT WORKING ENCODING ISSUE, see [Issue](https://github.com/facebookresearch/cc_net/issues/16) | August 235            |
+| 2020-34 / 2020-29             | NOT WORKING ENCODING ISSUE - see [issue](https://github.com/facebookresearch/cc_net/issues/16) | August 235            |
 
 This preprocessing is filtering duplicates only inside the same dump. This step took approx. 50,000 CPU hours and 400 TB of network traffic to the common crawl s3 bucket.
 
