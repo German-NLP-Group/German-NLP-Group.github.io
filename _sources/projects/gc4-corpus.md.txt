@@ -29,7 +29,7 @@ Preprocessing was done through the [cc_net library](https://github.com/facebookr
 | 2017-39                       | 75.6 GB                                                      | September 250         |
 | 2017-51                       | ~120 GB                                                      | December 240          |
 | 2018-09                       | 128 GB                                                       | Februrary 270         |
-| 2018-17                       | ~                                                            | April 230             |
+| 2018-17                       | ~120-130 GB                                                  | April 230             |
 | 2018-30                       | 131 GB                                                       | July 255              |
 | 2018-39                       | ~120 GB                                                      | September 220         |
 | 2018-51                       | ~120 GB                                                      | December 250          |
