@@ -3,7 +3,7 @@ The German colossal, cleaned Common Crawl corpus.
 
 This is a German text corpus which is based on [Common Crawl](https://commoncrawl.org/). It can be used for various tasks in the NLP field. For example, for the self-supervised training of language models.
 
-GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/) with support from [Philip May](https://eniak.de/) . Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
+GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/) with support from [Philip May](https://may.la/) . Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
 **For download scroll way down.**
 
@@ -40,7 +40,7 @@ Preprocessing was done through the [cc_net library](https://github.com/facebookr
 | 2020-10                       | 134 GB                                                       | February 240          |
 | 2020-34 / 2020-29             | NOT WORKING ENCODING ISSUE, see [Issue](https://github.com/facebookresearch/cc_net/issues/16) | August 235            |
 
-This preprocessing is filtering duplicates only inside the same dump. This step took approx. 50 000 CPU hours and 400 TB of network traffic to the common crawl s3 bucket.
+This preprocessing is filtering duplicates only inside the same dump. This step took approx. 50,000 CPU hours and 400 TB of network traffic to the common crawl s3 bucket.
 
 ## Common Crawl News Dataset
 You can convert the Common Crawl News Shards with a WARC to WET library and then feed to cc_net just as the normal Common Crawl dumps.
@@ -79,7 +79,7 @@ This table sums up the sizes of all preprocessed monthly dumps and 2 different a
 
 ## Comparison to other Datasets which are based on Common Crawl and very large
 - C4/mC4 Dataset used by Google:
-  - Multilingual one is only available on request (See issue [here](https://github.com/allenai/allennlp/discussions/5056))
+  - Multilingual one is only available on request (see issue [here](https://github.com/allenai/allennlp/discussions/5056))
   - As the English only is already a requester pays, it requires you to have approx. 100 $ of Google Cloud Credits
   - The way of filtering here is different (and in our mind inferior to [cc_net library](https://github.com/facebookresearch/cc_net)
     - They doesn't split for quality like cc_net
