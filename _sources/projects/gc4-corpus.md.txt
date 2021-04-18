@@ -1,9 +1,9 @@
 # GC4 Corpus
 The German colossal, cleaned Common Crawl corpus.
 
-This German text corpus has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/).
+This is a German text corpus which is based on [Common Crawl](https://commoncrawl.org/). It can be used for various tasks in the NLP field. For example, for the self-supervised training of language models.
 
-Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
+GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/). Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
 ## Download
 The corpus is split into multiple files. Below are links to each single archive.
