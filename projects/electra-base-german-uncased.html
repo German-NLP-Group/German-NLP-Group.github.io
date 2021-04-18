@@ -91,6 +91,8 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">German Electra Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#uncase-and-umlauts-o-a-u">Uncase and Umlauts (‘Ö’, ‘Ä’, ‘Ü’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#creators">Creators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gc4-corpus.html">GC4 Corpus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xlsr.html">XLSR</a></li>
 </ul>
@@ -165,6 +167,20 @@
   <div class="section" id="german-electra-model">
 <h1>German Electra Model<a class="headerlink" href="#german-electra-model" title="Permalink to this headline">¶</a></h1>
 <p>The German Electra model: <a class="reference external" href="https://huggingface.co/german-nlp-group/electra-base-german-uncased">german-nlp-group/electra-base-german-uncased</a></p>
+<p>We released an improved German Electra model. It was trained on a total of 1,500,000 steps.</p>
+</div>
+<div class="section" id="uncase-and-umlauts-o-a-u">
+<h1>Uncase and Umlauts (‘Ö’, ‘Ä’, ‘Ü’)<a class="headerlink" href="#uncase-and-umlauts-o-a-u" title="Permalink to this headline">¶</a></h1>
+<p>This model is uncased. This helps especially for domains where colloquial terms with uncorrect capitalization is often used.</p>
+<p>The special characters ‘ö’, ‘ü’, ‘ä’ are included through the <code class="docutils literal notranslate"><span class="pre">strip_accent=False</span></code> option, as this leads to an improved precision.</p>
+</div>
+<div class="section" id="creators">
+<h1>Creators<a class="headerlink" href="#creators" title="Permalink to this headline">¶</a></h1>
+<p>This model was trained and open sourced in conjunction with the <a class="reference external" href="https://german-nlp-group.github.io/"><strong>German NLP Group</strong></a> in equal parts by:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://May.la"><strong>Philip May</strong></a> - <a class="reference external" href="https://www.t-systems-onsite.de/">T-Systems on site services GmbH</a></p></li>
+<li><p><a class="reference external" href="https://www.reissel.eu"><strong>Philipp Reißel</strong></a> - <a class="reference external" href="https://amberoad.de/">ambeRoad</a></p></li>
+</ul>
 </div>
 
 
