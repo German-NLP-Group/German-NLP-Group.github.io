@@ -1,7 +1,7 @@
 # GC4 Corpus
 The German colossal, cleaned Common Crawl corpus.
 
-This is a German text corpus which is based on [Common Crawl](https://commoncrawl.org/). It can be used for various tasks in the NLP field. For example, for the self-supervised training of language models.
+This is a German text corpus which is based on [Common Crawl](https://commoncrawl.org/). It has been cleaned up and preprocessed and can be used for various tasks in the NLP field. For example, for the self-supervised training of language models.
 
 GC4 has been created by [**Philipp Reißel**](https://www.reissel.eu) from [ambeRoad](https://amberoad.de/) with support from [Philip May](https://may.la/) . Many thanks to [iisys](https://www.iisys.de/) (the Institute of Information Systems Hof University) for hosting this dataset.
 
@@ -71,9 +71,9 @@ This table sums up the sizes of all preprocessed monthly dumps and 2 different a
   - To avoid having sites with the same URL from different monthly dumps in more strict filtering we filtered out every URL that appeared twice
   - One edge case which we couldn't solve, were URLs were a hashed parameter is appended, but this is pretty rare
 
-| Size here is with metadata but compressed<br/>as .gz so raw text is approx. 2x the given size | Head<br/>pages/size  | Middle<br/>Pages/size          | Tail         |
+| Size here is with metadata but compressed<br/>as .gz so raw text is approx. 2x the given size | Head<br/>pages/size  | Middle<br/>pages/size          | Tail<br/>pages/size         |
 | ------------------------------------------------------------ | ---------------- | -------------------------- | ------------ |
-| Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------ / 1TB |
+| Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------<br/>1TB |
 | Deduplication through similar Text<br/>(available on request)    | 181 Mio<br/>294 GB | 251 Mio<br/>not yet exported |              |
 | **Deduplication through similar Text and URLs**<br/>(this is the one you can download here) | 142 Mio<br/>194 GB | 186 Mio<br/>254 GB           |              |
 
