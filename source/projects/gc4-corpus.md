@@ -91,6 +91,9 @@ This table sums up the sizes of all preprocessed monthly dumps and 2 different a
   - It only uses one monthly dump (November 2018) from Common Crawl
   - The filtering for quality seems to be less precise than cc_net
 
+## Terms of Use
+Since this dataset is based on [Common Crawl](https://commoncrawl.org/) we would like to just refer to their [terms of use](https://commoncrawl.org/terms-of-use/). Nevertheless, we would like to ask you to publish the work based on it under open source license.
+
 ## Download
 The corpus is split into multiple files. Below are links to each single archive.
 
