@@ -175,6 +175,13 @@
 <li><p>TAIL: The dark side of the Internet</p></li>
 </ul>
 <p>As it is classified through n-gram occurrences in comparison with the German wikipedia n-gram from our practical experience it worked quite well.</p>
+<div class="section" id="necessary-steps-before-usage">
+<h2>Necessary Steps before usage<a class="headerlink" href="#necessary-steps-before-usage" title="Permalink to this headline">¶</a></h2>
+<p>The tar.gz files consist of only one line per file (due to a weird mongodb export format)</p>
+<p>To split them up into one Json per line you can run the simple code from this <a class="reference external" href="https://gist.github.com/Phil1108/e1821fec6eb746edc8e04ef5f76d23f1">gist</a></p>
+<p>We recommend to filter these Jsons once again to only include <code class="docutils literal notranslate"><span class="pre">['language_score']</span> <span class="pre">&gt;</span> <span class="pre">0.98</span></code> . This only includes websites were German is really dominant and on top it helps avoid websites with random enumerations or large disclaimers.</p>
+<p>After running the gist on every part you simple filter it again for string occurences through <code class="docutils literal notranslate"><span class="pre">zcat</span> <span class="pre">de_head_0000_2015-48.tar.gz</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">'Aachen'</span></code>  or do more advanced filtering like n-gram based approaches.</p>
+</div>
 <div class="section" id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
 <p>Preprocessing was done through the <a class="reference external" href="https://github.com/facebookresearch/cc_net">cc_net library</a></p>
@@ -308,13 +315,13 @@
 <td><p>——<br/>1 TB</p></td>
 </tr>
 <tr class="row-odd"><td><p>Deduplication through similar Text<br/>(available on request)</p></td>
-<td><p>181 Mio<br/>294 GB</p></td>
+<td><p>181 Mio<br/>278 GB</p></td>
 <td><p>251 Mio<br/>not yet exported</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Deduplication through similar Text and URLs</strong><br/>(this is the one you can download here)</p></td>
-<td><p>142 Mio<br/>194 GB</p></td>
-<td><p>186 Mio<br/>254 GB</p></td>
+<td><p>142 Mio<br/>181 GB</p></td>
+<td><p>186 Mio<br/>273 GB</p></td>
 <td><p></p></td>
 </tr>
 </tbody>

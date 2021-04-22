@@ -15,6 +15,20 @@ In a very simplified matter one can say:
 
 As it is classified through n-gram occurrences in comparison with the German wikipedia n-gram from our practical experience it worked quite well.
 
+
+
+#### Necessary Steps before usage
+
+The tar.gz files consist of only one line per file (due to a weird mongodb export format)
+
+To split them up into one Json per line you can run the simple code from this [gist](https://gist.github.com/Phil1108/e1821fec6eb746edc8e04ef5f76d23f1)
+
+We recommend to filter these Jsons once again to only include `['language_score'] > 0.98` . This only includes websites were German is really dominant and on top it helps avoid websites with random enumerations or large disclaimers. 
+
+After running the gist on every part you simple filter it again for string occurences through `zcat de_head_0000_2015-48.tar.gz | grep 'Aachen'`  or do more advanced filtering like n-gram based approaches. 
+
+
+
 ## Preprocessing
 Preprocessing was done through the [cc_net library](https://github.com/facebookresearch/cc_net)
 
@@ -74,8 +88,8 @@ This table sums up the sizes of all preprocessed monthly dumps and 2 different a
 | Size here is with metadata but compressed<br/>as .gz so raw text is approx. 2x the given size | Head<br/>pages/size  | Middle<br/>pages/size          | Tail<br/>pages/size         |
 | ------------------------------------------------------------ | ---------------- | -------------------------- | ------------ |
 | Original                                                     | 263 Mio<br/>392 GB | 332 Mio<br/>499 GB           | ------<br/>1 TB |
-| Deduplication through similar Text<br/>(available on request)    | 181 Mio<br/>294 GB | 251 Mio<br/>not yet exported |              |
-| **Deduplication through similar Text and URLs**<br/>(this is the one you can download here) | 142 Mio<br/>194 GB | 186 Mio<br/>254 GB           |              |
+| Deduplication through similar Text<br/>(available on request)    | 181 Mio<br/>278 GB | 251 Mio<br/>not yet exported |              |
+| **Deduplication through similar Text and URLs**<br/>(this is the one you can download here) | 142 Mio<br/>181 GB | 186 Mio<br/>273 GB         |              |
 
 ## Comparison to other Datasets which are based on Common Crawl and very large
 - C4/mC4 Dataset used by Google:
