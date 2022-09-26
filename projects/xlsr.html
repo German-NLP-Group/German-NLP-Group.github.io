@@ -7,8 +7,8 @@
   <title>XLSR &mdash; German NLP Group  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
       <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -17,7 +17,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../_static/togglebutton.js"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/js/theme.js"></script>
@@ -71,8 +76,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="xlsr">
-<h1>XLSR<a class="headerlink" href="#xlsr" title="Permalink to this headline"></a></h1>
+  <section id="xlsr">
+<h1>XLSR<a class="headerlink" href="#xlsr" title="Permalink to this heading"></a></h1>
 <p>Cross-lingual sentence representations project on GitHub: <a class="reference external" href="https://github.com/German-NLP-Group/xlsr">German-NLP-Group/xlsr</a></p>
 <p>We have created a new project with two gloals:</p>
 <ul class="simple">
@@ -80,7 +85,7 @@
 <li><p>provide models that further increase the performance of <a class="reference external" href="https://huggingface.co/T-Systems-onsite/cross-en-de-roberta-sentence-transformer">T-Systems-onsite/cross-en-de-roberta-sentence-transformer</a>.</p></li>
 </ul>
 <p>The model training consists of two parts steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>automated hyperparameter oprimization with optuna and a 10-fold crossvalidation</p></li>
 <li><p>training and saving the models with the found hyperparameterset</p></li>
 </ol>

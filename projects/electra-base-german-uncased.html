@@ -7,8 +7,8 @@
   <title>German Electra Model &mdash; German NLP Group  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
       <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -17,7 +17,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../_static/togglebutton.js"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/js/theme.js"></script>
@@ -72,17 +77,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="german-electra-model">
-<h1>German Electra Model<a class="headerlink" href="#german-electra-model" title="Permalink to this headline"></a></h1>
+  <section id="german-electra-model">
+<h1>German Electra Model<a class="headerlink" href="#german-electra-model" title="Permalink to this heading"></a></h1>
 <p>The German Electra model: <a class="reference external" href="https://huggingface.co/german-nlp-group/electra-base-german-uncased">german-nlp-group/electra-base-german-uncased</a></p>
 <p>We released an improved German Electra model. It was trained on a total of 1,500,000 steps.</p>
 <section id="uncase-and-umlauts-o-a-u">
-<h2>Uncase and Umlauts (‘Ö’, ‘Ä’, ‘Ü’)<a class="headerlink" href="#uncase-and-umlauts-o-a-u" title="Permalink to this headline"></a></h2>
+<h2>Uncase and Umlauts (‘Ö’, ‘Ä’, ‘Ü’)<a class="headerlink" href="#uncase-and-umlauts-o-a-u" title="Permalink to this heading"></a></h2>
 <p>This model is uncased. This helps especially for domains where colloquial terms with uncorrect capitalization is often used.</p>
 <p>The special characters ‘ö’, ‘ü’, ‘ä’ are included through the <code class="docutils literal notranslate"><span class="pre">strip_accent=False</span></code> option, as this leads to an improved precision.</p>
 </section>
 <section id="creators">
-<h2>Creators<a class="headerlink" href="#creators" title="Permalink to this headline"></a></h2>
+<h2>Creators<a class="headerlink" href="#creators" title="Permalink to this heading"></a></h2>
 <p>This model was trained and open sourced in conjunction with the <a class="reference external" href="https://german-nlp-group.github.io/"><strong>German NLP Group</strong></a> in equal parts by:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://May.la"><strong>Philip May</strong></a> - <a class="reference external" href="https://www.t-systems-onsite.de/">T-Systems on site services GmbH</a></p></li>
