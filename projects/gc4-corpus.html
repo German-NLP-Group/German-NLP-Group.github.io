@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GC4 Corpus &mdash; German NLP Group  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -20,11 +21,6 @@
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../_static/togglebutton.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,11 +33,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> German NLP Group
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            German NLP Group
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -66,8 +66,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>GC4 Corpus</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">GC4 Corpus</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/German-NLP-Group/German-NLP-Group.github.io/blob/main/source/projects/gc4-corpus.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -81,7 +81,8 @@
 <h1>GC4 Corpus<a class="headerlink" href="#gc4-corpus" title="Permalink to this heading"></a></h1>
 <p>The German colossal, cleaned Common Crawl corpus.</p>
 <p>This is a German text corpus which is based on <a class="reference external" href="https://commoncrawl.org/">Common Crawl</a>. It has been cleaned up and preprocessed and can be used for various tasks in the NLP field. For example, for the self-supervised training of language models.</p>
-<p>GC4 has been created by <a class="reference external" href="https://www.reissel.eu"><strong>Philipp Reißel</strong></a> from <a class="reference external" href="https://amberoad.de/">ambeRoad</a> with support from <a class="reference external" href="https://may.la/">Philip May</a>. Many thanks to <a class="reference external" href="https://www.iisys.de/">iisys</a> (the Institute of Information Systems Hof University) for hosting this dataset.</p>
+<p>GC4 has been created by <a class="reference external" href="https://www.reissel.eu"><strong>Philipp Reißel</strong></a> from <a class="reference external" href="https://amberoad.de/">ambeRoad</a> with support from <a class="reference external" href="https://may.la/">Philip May</a> from <a class="reference external" href="https://www.telekom.de/">Deutsche Telekom</a>.
+Many thanks to <a class="reference external" href="https://www.iisys.de/">iisys</a> (the Institute of Information Systems Hof University) for hosting this dataset.</p>
 <p><strong>For <span class="xref myst">download</span> scroll way down.</strong></p>
 <p>In a very simplified matter one can say:</p>
 <ul class="simple">
@@ -100,7 +101,7 @@
 <section id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading"></a></h2>
 <p>Preprocessing was done through the <a class="reference external" href="https://github.com/facebookresearch/cc_net">cc_net library</a></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>CC Dump</p></th>
 <th class="head"><p>Total Size: German tail + middle + head  (before dedup)</p></th>
@@ -215,7 +216,7 @@
 <li><p>To avoid having sites with the same URL from different monthly dumps in more strict filtering we filtered out every URL that appeared twice</p></li>
 <li><p>One edge case which we couldn’t solve, were URLs were a hashed parameter is appended, but this is pretty rare</p></li>
 </ul>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Size here is with metadata but compressed<br/>as .gz so raw text is approx. 2x the given size</p></th>
 <th class="head"><p>Head<br/>pages/size</p></th>
@@ -279,10 +280,10 @@
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
 <p>The corpus is split into multiple files. Below are links to each single archive.</p>
 <p>Instead of downloading the single links you can download two files with all URLs and then use <code class="docutils literal notranslate"><span class="pre">wget</span></code> to download the single archives:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://german-nlp-group.github.io/_static/file/gc4_corpus_head_urls.txt
-wget -i gc4_corpus_head_urls.txt
-wget https://german-nlp-group.github.io/_static/file/gc4_corpus_middle_urls.txt
-wget -i gc4_corpus_middle_urls.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://german-nlp-group.github.io/_static/file/gc4_corpus_head_urls.txt
+wget<span class="w"> </span>-i<span class="w"> </span>gc4_corpus_head_urls.txt
+wget<span class="w"> </span>https://german-nlp-group.github.io/_static/file/gc4_corpus_middle_urls.txt
+wget<span class="w"> </span>-i<span class="w"> </span>gc4_corpus_middle_urls.txt
 </pre></div>
 </div>
 <section id="head">
